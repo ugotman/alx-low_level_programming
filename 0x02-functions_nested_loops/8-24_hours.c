@@ -1,10 +1,10 @@
 #include "main.h"
 
 /**
-*jack_bauer-prints all minutes of the day Jack Bauer 
+*jack_bauer-prints all minutes of the day Jack Bauer
 *Return: void
 */
-void jack_bauer(void) 
+void jack_bauer(void)
 {
 
 int h1;
@@ -29,7 +29,7 @@ while (h2 <= 2)
 			m1 = 0;
 			while (m1 <= 9)
 			{
-				_putchar('0' + h2);				
+				_putchar('0' + h2);
 				_putchar('0' + h1);								_putchar(':');
 				_putchar('0' + m2);
 				_putchar('0' + m1);
