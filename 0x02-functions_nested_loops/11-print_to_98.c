@@ -1,20 +1,16 @@
 #include "main.h"
 
 /**
- * print_times_table - prints time table
- * @n : times table to use
- * Description: prints the times table
- * Return:void
+ *print_to_98 - print any number to 98
+ *@n: number to start from
+ *Return: return result
  */
 
-void print_times_table(int n)
+void print_to_98(int n)
 {
-int a = 0, rep, b;
-if (n < 0 || n > 15)
-	return;
-while (a <= n)
-{
-	for (b = 0; b <= n; b++)
-		rep = a * b;
-}
+	upperband(n);
+	lowerband(n);
+	_putchar((98 / 10) + 48);
+	_putchar((98 % 10) + 48);
+	_putchar('\n');
 }
