@@ -1,30 +1,21 @@
+#include <stdio.h>
 #include "main.h"
-
+#include <math.h>
 /**
- * get_bit - returns the value of a bit of a given index
- * @n: value from whose index, a bit would be returned
- * @index: the index of the value to be returned.
- * Return: bit value at index
+ * get_bit - Write a function that returns the value of a bit at a
+ * given index.
+ * Prototype: int get_bit(unsigned long int n, unsigned int index);
+ * @index: is the index, starting from 0 of the bit you want to get
+ * @n: bit value in the index.
+ * Return: the value of the bit at index index or -1 if an error occured
  */
-
 int get_bit(unsigned long int n, unsigned int index)
 {
-	unsigned int i = 0;
-	int bit;
-	
-	if (index >= sizeof(n) * 8)
-	{
+	if (index > 63)
 		return (-1);
-	}
-
-	for (i = 0; n > 0; i++)
+	if (index == 0)
 	{
-		bit = n % 2;
-		n = n / 2;
-		if (i == index)
-		{
-			return (bit);
-		}
+		return (n & 1);
 	}
-	return (-1);
+	return (get_bit(n >> 1, index - 1));
 }
